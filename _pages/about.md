@@ -12,5 +12,5 @@ I'm a Master's student in the University Chinese Academy of Sciences, under the 
 My research interests include:
  - Scalable Oversight
  - LLM Safety
- - Multi-model LLM 
+ - Multi-modal LLM 
 
