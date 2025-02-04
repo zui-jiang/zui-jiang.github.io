@@ -13,4 +13,5 @@ My research interests include:
  - Scalable Oversight
  - LLM Safety
  - Multi-modal LLM 
+ - Mechanistic interpretability
 
