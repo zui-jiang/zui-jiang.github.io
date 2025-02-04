@@ -48,3 +48,29 @@ My research interests include:
   **Yanjiang Liu**, **Tianyun Zhong**, **Yaojie Lu**, **Hongyu Lin**, **Ben He**, **Shuheng Zhou**, **Huijia Zhu**, **Weiqiang Wang**, **Zhongyi Liu**, **Xianpei Han**, **Le Sun** 
   *Annual Meeting of the Association for Computational Linguistics (ACL 2024 findings)*  
   [[Paper]](https://aclanthology.org/2024.findings-acl.336.pdf) [[Code]](https://github.com/zui-jiang/XMC-AGENT)
+
+
+<script>
+  // 获取访客的IP地址并通过API获取地理位置信息
+  fetch('https://ipinfo.io?token=your_token')
+    .then(response => response.json())
+    .then(data => {
+      const [lat, lon] = data.loc.split(',');
+      
+      // 初始化 Google Map
+      const map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: parseFloat(lat), lng: parseFloat(lon) },
+        zoom: 10
+      });
+      
+      // 添加标记
+      new google.maps.Marker({
+        position: { lat: parseFloat(lat), lng: parseFloat(lon) },
+        map: map
+      });
+    });
+</script>
+<!-- Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=your_google_maps_api_key&callback=initMap" async defer></script>
+
+<div id="map" style="height: 400px;"></div>
